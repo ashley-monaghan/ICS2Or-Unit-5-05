@@ -10,8 +10,8 @@
  * Check servie worker.
  */
 if (navigator.serviceWorker) {
-  navigator.serviceWorker.register("/ICS2O-PWA-Test/sw.js", {
-    scope: "/ICS2O-PWA-Test/",
+  navigator.serviceWorker.register("/ICS2Or-Unit-5-05-Test/sw.js", {
+    scope: "/ICS2Or-Unit-5-05-Test/",
   })
 }
 
@@ -21,20 +21,12 @@ if (navigator.serviceWorker) {
  */
 function calculate() {
   // input
-  const a = parseInt(document.getElementById("textbox-a").value)
-  const b = parseInt(document.getElementById("textbox-b").value)
-  const c = parseInt(document.getElementById("textbox-c").value)
+  const a = parseInt(document.getElementById("length-a").value)
+  const b = parseInt(document.getElementById("length-b").value)
+  const c = parseInt(document.getElementById("length-c").value)
 
   // process
   const math = a + b + c
   // output
   document.getElementById("math").innerHTML = "Numbers: " + math + " units"
-}
-
-/**
- * This function displays an alert.
- * Words
- */
-function button() {
-  document.getElementById("words").innerHTML = "<p>Hello, World!</p>"
 }
