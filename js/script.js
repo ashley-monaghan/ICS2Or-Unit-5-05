@@ -10,8 +10,8 @@
  * Check servie worker.
  */
 if (navigator.serviceWorker) {
-  navigator.serviceWorker.register("/ICS2Or-Unit-5-05-Test/sw.js", {
-    scope: "/ICS2Or-Unit-5-05-Test/",
+  navigator.serviceWorker.register("/ICS2Or-Unit-5-05/sw.js", {
+    scope: "/ICS2Or-Unit-5-05/",
   })
 }
 
@@ -28,5 +28,5 @@ function calculate() {
   // process
   const math = a + b + c
   // output
-  document.getElementById("math").innerHTML = "Numbers: " + math + " units"
+  document.getElementById("words").innerHTML = "Numbers: " + math + " cm"
 }
