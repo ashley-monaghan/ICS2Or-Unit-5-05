@@ -21,32 +21,29 @@ if (navigator.serviceWorker) {
  */
 function calculate() {
   // input
-  const a = parseInt(document.getElementById("length-a").value)
-  const b = parseInt(document.getElementById("length-b").value)
-  const c = parseInt(document.getElementById("length-c").value)
+  const sideA = parseInt(document.getElementById("length-a").value)
+  const sideB = parseInt(document.getElementById("length-b").value)
+  const sideC = parseInt(document.getElementById("length-c").value)
 
+  if {
   // process
   const angleA =
     Math.acos(
-      (lengthB ** 2 + lengthC ** 2 - lengthA ** 2) / (2 * lengthB * lengthC)
+      (sideB ** 2 + sideC ** 2 - sideA ** 2) / (2 * sideB * sideC)
     ) *
     (180 / Math.PI)
   const angleB =
     Math.acos(
-      (lengthC ** 2 + lengthA ** 2 - lengthB ** 2) / (2 * lengthC * lengthA)
+      (sideC ** 2 + sideA ** 2 - sideB ** 2) / (2 * sideC * sideA)
     ) *
     (180 / Math.PI)
   const angleC =
     Math.acos(
-      (lengthA ** 2 + lengthB ** 2 - lengthC ** 2) / (2 * lengthA * lengthB)
+      (sideA ** 2 + sideB ** 2 - sideC ** 2) / (2 * sideA * sideB)
     ) *
     (180 / Math.PI)
 
-  const sumOfAngles =
-    Number(angleA.toFixed(2)) +
-    Number(angleB.toFixed(2)) +
-    Number(angleC.toFixed(2))
-  Number(angleB.toFixed(2)) + Number(angleC.toFixed(2))
+
   // output
   document.getElementById("words").innerHTML = "Numbers: " + math + " cm"
 }
