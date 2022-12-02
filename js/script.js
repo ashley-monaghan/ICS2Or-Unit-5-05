@@ -47,17 +47,17 @@ function calculate() {
     (180 / Math.PI)
 
   if (angleA == angleB && angleA == angleC) {
-    document.getElementById("words").innerHTML =
+    document.getElementById("calculate").innerHTML =
       "You have an equalatiral triangle!"
   } else if (angleA != angleB && angleA != angleC && angleB != angleC) {
-    document.getElementById("words").innerHTML = "You have a scalene triangle!"
+    document.getElementById("calculate").innerHTML = "You have a scalene triangle!"
   } else if (
     (angleA != angleB && angleA == angleC) ||
     (angleA == angleB && angleA != angleC)
   ) {
-    document.getElementById("words").innerHTML =
+    document.getElementById("calculate").innerHTML =
       "You have a isosceles triangle!"
   } else {
-    document.getElementById("words").innerHTML = "Umm not a triangle.."
+    document.getElementById("calculate").innerHTML = "Umm not a triangle.."
   }
 }
