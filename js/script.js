@@ -48,15 +48,16 @@ function calculate() {
 
   if (angleA == angleB && angleA == angleC) {
     document.getElementById("words").innerHTML =
-    "You have an equalatiral triangle!"
-  } else if ((angleA != angleB) && (angleA != angleC) && (angleB != angleC)) {
+      "You have an equalatiral triangle!"
+  } else if (angleA != angleB && angleA != angleC && angleB != angleC) {
+    document.getElementById("words").innerHTML = "You have a scalene triangle!"
+  } else if (
+    (angleA != angleB && angleA == angleC) ||
+    (angleA == angleB && angleA != angleC)
+  ) {
     document.getElementById("words").innerHTML =
-    "You have a scalene triangle!"
-  } else if ((angleA != angleB) && (angleA == angleC) || (angleA == angleB) && (angleA != angleC)) {
-    document.getElementById("words").innerHTML =
-    "You have a isosceles triangle!"
+      "You have a isosceles triangle!"
   } else {
-    document.getElementById("words").innerHTML =
-    "Umm not a triangle.."
+    document.getElementById("words").innerHTML = "Umm not a triangle.."
   }
 }
