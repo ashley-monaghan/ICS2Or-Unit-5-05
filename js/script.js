@@ -21,29 +21,42 @@ if (navigator.serviceWorker) {
  */
 function calculate() {
   // input
-  const sideA = parseInt(document.getElementById("length-a").value)
-  const sideB = parseInt(document.getElementById("length-b").value)
-  const sideC = parseInt(document.getElementById("length-c").value)
+  const lengthAString = parseInt(document.getElementById("lengthA").value)
+  const lengthBString = parseInt(document.getElementById("lengthB").value)
+  const lengthCString = parseInt(document.getElementById("lengthC").value)
 
-  if {
+  const lengthA = parseFloat(lengthAString)
+  const lengthB = parseFloat(lengthBString)
+  const lengthC = parseFloat(lengthCString)
+
   // process
   const angleA =
     Math.acos(
-      (sideB ** 2 + sideC ** 2 - sideA ** 2) / (2 * sideB * sideC)
+      (lengthB ** 2 + lengthC ** 2 - lengthA ** 2) / (2 * lengthB * lengthC)
     ) *
     (180 / Math.PI)
   const angleB =
     Math.acos(
-      (sideC ** 2 + sideA ** 2 - sideB ** 2) / (2 * sideC * sideA)
+      (lengthC ** 2 + lengthA ** 2 - lengthB ** 2) / (2 * lengthC * lengthA)
     ) *
     (180 / Math.PI)
   const angleC =
     Math.acos(
-      (sideA ** 2 + sideB ** 2 - sideC ** 2) / (2 * sideA * sideB)
+      (lengthA ** 2 + lengthB ** 2 - lengthC ** 2) / (2 * lengthA * lengthB)
     ) *
     (180 / Math.PI)
 
-
-  // output
-  document.getElementById("words").innerHTML = "Numbers: " + math + " cm"
+  if (angleA == angleB && angleA == angleC) {
+    document.getElementById("words").innerHTML =
+    "You have an equalatiral triangle!"
+  } else if ((angleA != angleB) && (angleA != angleC) && (angleB != angleC)) {
+    document.getElementById("words").innerHTML =
+    "You have a scalene triangle!"
+  } else if ((angleA != angleB) && (angleA == angleC) || (angleA == angleB) && (angleA != angleC)) {
+    document.getElementById("words").innerHTML =
+    "You have a isosceles triangle!"
+  } else {
+    document.getElementById("words").innerHTML =
+    "Umm not a triangle.."
+  }
 }
