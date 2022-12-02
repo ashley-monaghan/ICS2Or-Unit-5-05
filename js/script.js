@@ -50,9 +50,11 @@ function calculate() {
     document.getElementById("answer").innerHTML =
       "You have an equalatiral triangle!"
   } else if (angleA != angleB && angleA != angleC && angleB != angleC) {
-    document.getElementById("answer").innerHTML = 
-    "You have a scalene triangle!"
-  } else if ((angleA != angleB && angleA == angleC) || (angleA == angleB && angleA != angleC)) {
+    document.getElementById("answer").innerHTML = "You have a scalene triangle!"
+  } else if (
+    (angleA != angleB && angleA == angleC) ||
+    (angleA == angleB && angleA != angleC)
+  ) {
     document.getElementById("answer").innerHTML =
       "You have a isosceles triangle!"
   } else {
