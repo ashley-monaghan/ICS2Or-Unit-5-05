@@ -19,7 +19,7 @@ if (navigator.serviceWorker) {
  * This function displays an alert.
  * Math
  */
-function calculate() {
+function button() {
   // input
   const lengthAString = parseInt(document.getElementById("lengthA").value)
   const lengthBString = parseInt(document.getElementById("lengthB").value)
